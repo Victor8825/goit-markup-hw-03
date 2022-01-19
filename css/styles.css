@@ -1,4 +1,6 @@
 :root {
+  --section-margin: 94px;
+
   --title-text-color: #212121;
   --text-color: #757575;
   --background-hero-color: #2f303a;
@@ -39,7 +41,7 @@ body {
   background-color: var(--background-color);
 }
 .container {
-  width: 1200px;
+  width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -109,7 +111,11 @@ body {
 /*---------------MAIN----------------------
 /* ---------------hero------------------------ */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   text-align: center;
+
   background-color: var(--background-hero-color);
 }
 .hero-title {
