@@ -47,7 +47,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid red;
 }
 
 .section {
@@ -84,8 +83,6 @@ body {
 }
 
 .logo {
-  margin-right: 93px;
-
   text-decoration: none;
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -95,6 +92,11 @@ body {
 
   color: var(--title-text-color);
 }
+
+.header-logo {
+  margin-right: 93px;
+}
+
 .accent {
   color: var(--accent-color);
 }
@@ -198,6 +200,13 @@ body {
 .features-list {
   display: flex;
 }
+.features-item {
+  max-width: 270px;
+}
+
+.features-item:not(:last-child) {
+  margin-right: var(--card-set-gap);
+}
 
 .features-title {
   margin-bottom: 10px;
@@ -218,15 +227,14 @@ body {
 
   color: var(--text-color);
 }
+
 /* -----------------section about------------ */
 .about-list {
   display: flex;
-  margin-left: calc(-1 * var(--card-set-gap));
 }
 
-.about-list > .about-item {
-  flex-basis: calc(100% / 3 - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
+.about-item:not(:last-child) {
+  margin-right: var(--card-set-gap);
 }
 
 .about-title {
@@ -261,9 +269,13 @@ body {
 .team-list {
   display: flex;
 }
-.team-item:last-child {
-  margin-right: 30px;
+
+.team-item {
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-item:not(:last-child) {
+  margin-right: var(--card-set-gap);
 }
 
 .team-names {
@@ -293,10 +305,17 @@ body {
 /*------------------ buttons----------------- */
 .filter {
   display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.filter li:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-button {
   border-radius: 4px;
+  border: transparent;
   padding: 6px 22px;
   min-width: 73px;
 
@@ -317,8 +336,27 @@ body {
   background-color: var(--accent-color);
 }
 /* ---------------примеры работ  projects------------- */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 94px;
+}
+.project-item {
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.project-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.project-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
 
 .project-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
@@ -333,7 +371,18 @@ body {
 
   color: var(--text-color);
 }
+
+.project-content {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
 /*----------------- FOOTER--------------- */
+.footer-wrap {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
 .footer {
   font-style: normal;
@@ -343,17 +392,13 @@ body {
 
   background-color: var(--footer-background-color);
 }
-.footer .logo {
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
 
+.footer-logo {
   color: var(--additional-font-color);
 }
 
 .footer-link {
+  margin-top: 9px;
   font-style: normal;
 
   color: var(--footer-text-color);
@@ -362,4 +407,7 @@ body {
   font-style: normal;
 
   color: var(--additional-font-color);
+}
+.footer-contacts {
+  margin-top: 20px;
 }
