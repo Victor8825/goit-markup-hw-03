@@ -231,6 +231,10 @@ body {
 }
 
 /* -----------------section about------------ */
+.about {
+  padding-bottom: var(--section-padding-bottom);
+}
+
 .about-list {
   display: flex;
 }
